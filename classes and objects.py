@@ -11,11 +11,16 @@
 # create your own class:
 
 # class, instance, attribute, methods
+# python class names are started by CapitalLetters and no spaces by convention
+# function names are done by small letters and underscores.
 class Human(object):
-    # This is an instance:
+    # This is a Class Attribute, These are common in all human
+    species = 'Homo sapiens'
+
+    # initialize the objects state by assigning the values of the objects properties
     def __init__(self, name, age, weight):
         print('Nice you made a Human class')
-    # This is an attribute:
+    # These are called Instance Attributes and vary from human to human:
         self.name = name
         self.age = age
         self.weight = weight
@@ -32,8 +37,14 @@ class Human(object):
     def add_weight(self, weight):
         self.weight = weight
 
-
+# This is an object of class Human, also known as an Instance or Human Class Instance:
 tim = Human('Tim', 54)
+# The object of class Human is using the method speak:
 tim.speak()
+# The object of class Human is using the mehod change_name:
 tim.change_age(5)
 tim.speak()
+
+# So, the class is human()
+# methods are functions defined within the class, such as speak, change_age
+# Instance is the object of the class human()
