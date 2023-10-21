@@ -38,9 +38,12 @@ class Human(object):
         self.weight = weight
 
 # This is an object of class Human, also known as an Instance or Human Class Instance:
-tim = Human('Tim', 54)
+tim = Human('Tim', 54, 75)
+# Creating an instance of a class is called instantiation, as you have done above.
+
 # The object of class Human is using the method speak:
 tim.speak()
+
 # The object of class Human is using the mehod change_name:
 tim.change_age(5)
 tim.speak()
@@ -48,3 +51,12 @@ tim.speak()
 # So, the class is human()
 # methods are functions defined within the class, such as speak, change_age
 # Instance is the object of the class human()
+
+# Here, the instance tim is changing it's class instance species!
+tim.species = 'No homo!'
+print(tim.species)
+
+# Now, tim is a very weird human, but this is Python..
+
+# Key takeaway is that classes are mutable in python just like lists
+# but strings and tuples are immutable in python.
