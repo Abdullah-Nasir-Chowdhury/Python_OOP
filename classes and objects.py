@@ -25,15 +25,18 @@ class Human(object):
         self.age = age
         self.weight = weight
 
-    # This is a method of class Human:
+    def __str__(self):
+        return f"{self.name} is {self.age} years old and weights {self.weight} kgs"
+
+    # This is an Instance method of class Human, These are functions defined in a class:
     def speak(self):
         print("Hi I am", self.name, 'and I am', self.age, 'years old')
 
-    # This is a method of class Human:
+    # This is an Instance method of class Human:
     def change_age(self, age):
         self.age = age
 
-    # This is a method of class Human:
+    # This is an Instance method of class Human:
     def add_weight(self, weight):
         self.weight = weight
 
@@ -60,3 +63,6 @@ print(tim.species)
 
 # Key takeaway is that classes are mutable in python just like lists
 # but strings and tuples are immutable in python.
+
+"""check whether mark is an instance of the class human"""
+print(isinstance(tim, Human))
